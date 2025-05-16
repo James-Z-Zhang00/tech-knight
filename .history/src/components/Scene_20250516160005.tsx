@@ -136,11 +136,10 @@ export default function Scene() {
               <h2 style={{
                 color: '#e6c88e',
                 fontSize: '2.2rem',
-                fontFamily: "'Goethe', serif",
+                fontFamily: 'Goethe, serif',
                 marginBottom: '0.5rem',
                 opacity: 0.9,
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                fontWeight: 'normal'
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
               }}>
                 Legacy of the Knight
               </h2>

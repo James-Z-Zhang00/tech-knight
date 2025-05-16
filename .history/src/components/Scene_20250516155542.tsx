@@ -109,20 +109,21 @@ export default function Scene() {
         display: 'flex',
         flex: 1,
         alignItems: 'center',
-        padding: '0 2rem',
-        minHeight: '90vh'
+        padding: '0 2rem'
       }}>
         {/* Left side content */}
         <div style={{
           flex: 1,
           padding: '2rem',
           display: 'flex',
-          alignItems: 'center',
-          height: '90vh',
+          alignItems: 'flex-start',
+          paddingTop: '10vh',
+          height: '100vh',
         }}>
           <article style={{
             maxWidth: '600px',
             margin: '0 auto',
+            marginTop: '-10vh',
             background: 'rgba(44, 24, 16, 0.7)',
             padding: '2rem',
             borderRadius: '8px',
@@ -136,11 +137,10 @@ export default function Scene() {
               <h2 style={{
                 color: '#e6c88e',
                 fontSize: '2.2rem',
-                fontFamily: "'Goethe', serif",
+                fontFamily: 'Goethe, serif',
                 marginBottom: '0.5rem',
                 opacity: 0.9,
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                fontWeight: 'normal'
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
               }}>
                 Legacy of the Knight
               </h2>
@@ -171,7 +171,7 @@ export default function Scene() {
         {/* 3D Scene Container - Right side */}
         <div style={{ 
           width: '50%',
-          height: '90vh',
+          height: 'calc(100vh - 200px)',
           position: 'relative'
         }}>
           <LoadingScreen />
