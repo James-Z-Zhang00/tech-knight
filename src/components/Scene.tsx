@@ -1,27 +1,39 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-import { useRef } from 'react'
-import { Mesh } from 'three'
+import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
+import { Suspense, useEffect } from 'react'
 
-function Box() {
-  const meshRef = useRef<Mesh>(null)
+// Preload the model
+useGLTF.preload('/src/assets/models/forgotten_knight.glb')
 
-  return (
-    <mesh ref={meshRef} rotation={[0, 0, 0]}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="orange" />
-    </mesh>
-  )
+function Knight() {
+  const { scene, nodes, materials } = useGLTF('/src/assets/models/forgotten_knight.glb')
+  console.log('Model loaded:', { scene, nodes, materials }) // Debug log
+  
+  useEffect(() => {
+    // Log if the model is loaded
+    console.log('Knight component mounted')
+  }, [])
+
+  return <primitive object={scene} scale={1.2} position={[0, 0, 0]} />
 }
 
 export default function Scene() {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <Canvas camera={{ position: [3, 3, 3] }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
-        <Box />
-        <OrbitControls />
+      <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
+        <color attach="background" args={['#f0f0f0']} />
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[5, 5, 5]} intensity={2} />
+        <pointLight position={[-5, 5, -5]} intensity={1} />
+        <Suspense fallback={<mesh><boxGeometry /><meshStandardMaterial color="hotpink" /></mesh>}>
+          <Knight />
+          <Environment preset="sunset" />
+        </Suspense>
+        <OrbitControls 
+          minDistance={5}
+          maxDistance={15}
+          target={[0, 1, 0]}
+        />
       </Canvas>
     </div>
   )
