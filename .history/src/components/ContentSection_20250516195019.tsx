@@ -45,7 +45,7 @@ const ContentSection: React.FC = () => {
           <h2 style={{
             color: '#e6c88e',
             fontSize: isMobile ? '1.8rem' : '2.2rem',
-            fontFamily: "'Goethe', 'Times New Roman', serif",
+            fontFamily: "'Goethe', serif",
             margin: 0,
             opacity: 0.9,
             textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
