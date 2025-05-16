@@ -14,18 +14,18 @@ function Knight() {
     console.log('Knight component mounted')
   }, [])
 
-  return <primitive object={scene} scale={1.1} position={[0, 0, 0]} />
+  return <primitive object={scene} scale={1.2} position={[0, 0, 0]} />
 }
 
 export default function Scene() {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#2c1810' }}>
-      <Canvas camera={{ position: [0, 4, 12], fov: 45 }}>
-        <color attach="background" args={['#2c1810']} />
-        <fog attach="fog" args={['#2c1810', 5, 20]} />
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 5, 5]} intensity={1.2} color="#e6c88e" />
-        <pointLight position={[-5, 5, -5]} intensity={0.6} color="#8b4513" />
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
+        <color attach="background" args={['#1a1a1a']} />
+        <fog attach="fog" args={['#1a1a1a', 5, 20]} />
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[5, 5, 5]} intensity={1.5} color="#ffd700" />
+        <pointLight position={[-5, 5, -5]} intensity={0.8} color="#8b0000" />
         <Suspense fallback={<mesh><boxGeometry /><meshStandardMaterial color="hotpink" /></mesh>}>
           <Knight />
           <Environment preset="sunset" />

@@ -14,7 +14,7 @@ function Knight() {
     console.log('Knight component mounted')
   }, [])
 
-  return <primitive object={scene} scale={1.1} position={[0, 0, 0]} />
+  return <primitive object={scene} scale={1.2} position={[0, 0, 0]} />
 }
 
 export default function Scene() {
