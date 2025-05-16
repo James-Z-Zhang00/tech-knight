@@ -66,7 +66,7 @@ function Knight() {
     })
   }, [scene])
 
-  return <primitive object={scene} scale={1.25} position={[0, 0, 0]} rotation={[0, -(Math.PI * 35/180), 0]} />
+  return <primitive object={scene} scale={1.1} position={[0, 0, 0]} />
 }
 
 export default function Scene() {
@@ -116,54 +116,49 @@ export default function Scene() {
           flex: 1,
           padding: '2rem',
           display: 'flex',
-          alignItems: 'center',
-          height: 'calc(100vh - 200px)',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          height: '100%'
         }}>
-          <article style={{
+          <div style={{
+            marginBottom: '2rem',
+            position: 'relative',
+            textAlign: 'center'
+          }}>
+            <h2 style={{
+              color: '#e6c88e',
+              fontSize: '2.2rem',
+              fontFamily: 'Goethe, serif',
+              marginBottom: '0.5rem',
+              opacity: 0.9,
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+            }}>
+              Legacy of the Knight
+            </h2>
+            <h3 style={{
+              color: '#e6c88e',
+              fontSize: '1.4rem',
+              fontFamily: 'Georgia, serif',
+              fontWeight: 'normal',
+              opacity: 0.7,
+              letterSpacing: '0.05em'
+            }}>
+              Legacy of the Knight
+            </h3>
+          </div>
+          <p style={{
+            color: '#e6c88e',
+            fontSize: '1.1rem',
+            lineHeight: '1.8',
             maxWidth: '600px',
             margin: '0 auto',
-            background: 'rgba(44, 24, 16, 0.7)',
-            padding: '2rem',
-            borderRadius: '8px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+            textAlign: 'justify',
+            fontFamily: 'Georgia, serif',
+            borderLeft: '3px solid #e6c88e',
+            paddingLeft: '2rem',
           }}>
-            <div style={{
-              marginBottom: '2rem',
-              position: 'relative',
-              textAlign: 'center'
-            }}>
-              <h2 style={{
-                color: '#e6c88e',
-                fontSize: '2.2rem',
-                fontFamily: 'Goethe, serif',
-                marginBottom: '0.5rem',
-                opacity: 0.9,
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-              }}>
-                Legacy of the Knight
-              </h2>
-              <h3 style={{
-                color: '#e6c88e',
-                fontSize: '1.4rem',
-                fontFamily: 'Georgia, serif',
-                fontWeight: 'normal',
-                opacity: 0.7,
-                letterSpacing: '0.05em'
-              }}>
-                Legacy of the Knight
-              </h3>
-            </div>
-            <p style={{
-              color: '#e6c88e',
-              fontSize: '1.1rem',
-              lineHeight: '1.8',
-              textAlign: 'justify',
-              fontFamily: 'Georgia, serif',
-              paddingLeft: '2rem',
-            }}>
-              In the depths of time, where legends whisper through ancient stones, stands a knight of extraordinary valor. This forgotten warrior, clad in armor that bears the marks of countless battles, embodies the timeless virtues of chivalry. Though his name may have faded from the scrolls of history, his spirit endures as a testament to the enduring power of honor, courage, and unwavering dedication to noble causes.
-            </p>
-          </article>
+            In the depths of time, where legends whisper through ancient stones, stands a knight of extraordinary valor. This forgotten warrior, clad in armor that bears the marks of countless battles, embodies the timeless virtues of chivalry. Though his name may have faded from the scrolls of history, his spirit endures as a testament to the enduring power of honor, courage, and unwavering dedication to noble causes.
+          </p>
         </div>
 
         {/* 3D Scene Container - Right side */}

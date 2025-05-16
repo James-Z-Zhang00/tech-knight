@@ -66,7 +66,7 @@ function Knight() {
     })
   }, [scene])
 
-  return <primitive object={scene} scale={1.25} position={[0, 0, 0]} rotation={[0, -(Math.PI * 35/180), 0]} />
+  return <primitive object={scene} scale={1.2} position={[0, 0, 0]} />
 }
 
 export default function Scene() {
@@ -125,7 +125,8 @@ export default function Scene() {
             background: 'rgba(44, 24, 16, 0.7)',
             padding: '2rem',
             borderRadius: '8px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            border: '1px solid rgba(230, 200, 142, 0.2)',
           }}>
             <div style={{
               marginBottom: '2rem',
@@ -159,6 +160,7 @@ export default function Scene() {
               lineHeight: '1.8',
               textAlign: 'justify',
               fontFamily: 'Georgia, serif',
+              borderLeft: '3px solid #e6c88e',
               paddingLeft: '2rem',
             }}>
               In the depths of time, where legends whisper through ancient stones, stands a knight of extraordinary valor. This forgotten warrior, clad in armor that bears the marks of countless battles, embodies the timeless virtues of chivalry. Though his name may have faded from the scrolls of history, his spirit endures as a testament to the enduring power of honor, courage, and unwavering dedication to noble causes.

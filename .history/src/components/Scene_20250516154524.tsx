@@ -125,7 +125,8 @@ export default function Scene() {
             background: 'rgba(44, 24, 16, 0.7)',
             padding: '2rem',
             borderRadius: '8px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            border: '1px solid rgba(230, 200, 142, 0.2)',
           }}>
             <div style={{
               marginBottom: '2rem',

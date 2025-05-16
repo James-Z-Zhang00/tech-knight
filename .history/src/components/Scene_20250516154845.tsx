@@ -174,7 +174,7 @@ export default function Scene() {
         }}>
           <LoadingScreen />
           <Canvas 
-            camera={{ position: [0, 4, 10], fov: 45 }}
+            camera={{ position: [0, 0, 10], fov: 45 }}
             gl={{ 
               antialias: true,
               powerPreference: "high-performance"
