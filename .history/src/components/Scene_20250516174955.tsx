@@ -120,32 +120,6 @@ export default function Scene() {
         </nav>
       </div>
 
-      {/* Space for text content */}
-      <div style={{
-        padding: '2rem',
-        color: '#e6c88e',
-        fontFamily: 'Arial, sans-serif',
-        textAlign: 'center',
-      }}>
-        <h1 style={{
-          fontSize: '2.5rem',
-          marginBottom: '1rem',
-          fontWeight: 'bold',
-          letterSpacing: '0.1em',
-          textTransform: 'uppercase'
-        }}>
-          The Forgotten Knight
-        </h1>
-        <p style={{
-          fontSize: '1.2rem',
-          maxWidth: '800px',
-          margin: '0 auto',
-          opacity: '0.9'
-        }}>
-          A Tale of Honor and Valor in the Medieval Realm
-        </p>
-      </div>
-
       {/* Content and Scene Container */}
       <div style={{
         display: 'flex',

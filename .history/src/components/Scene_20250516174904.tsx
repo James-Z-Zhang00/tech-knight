@@ -101,17 +101,13 @@ export default function Scene() {
                 textDecoration: 'none',
                 fontFamily: 'Georgia, serif',
                 letterSpacing: '0.05em',
-                transition: 'all 0.3s ease',
+                transition: 'opacity 0.3s ease',
                 opacity: 0.9,
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.opacity = '1';
-                e.currentTarget.style.textShadow = '0 0 10px rgba(230, 200, 142, 0.5)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = '0.9';
-                e.currentTarget.style.textShadow = 'none';
+                cursor: 'pointer',
+                ':hover': {
+                  opacity: 1,
+                  textShadow: '0 0 10px rgba(230, 200, 142, 0.5)'
+                }
               }}
             >
               {item}

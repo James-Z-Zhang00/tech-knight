@@ -78,48 +78,6 @@ export default function Scene() {
       display: 'flex',
       flexDirection: 'column',
     }}>
-      {/* Navigation Menu */}
-      <div style={{
-        padding: '2rem',
-        color: '#e6c88e',
-        fontFamily: 'Arial, sans-serif',
-        textAlign: 'center',
-      }}>
-        <nav style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '2.5rem',
-          alignItems: 'center'
-        }}>
-          {['Home', 'Background', 'Skills', 'Experience', 'Projects'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              style={{
-                color: '#e6c88e',
-                fontSize: '1.2rem',
-                textDecoration: 'none',
-                fontFamily: 'Georgia, serif',
-                letterSpacing: '0.05em',
-                transition: 'all 0.3s ease',
-                opacity: 0.9,
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.opacity = '1';
-                e.currentTarget.style.textShadow = '0 0 10px rgba(230, 200, 142, 0.5)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = '0.9';
-                e.currentTarget.style.textShadow = 'none';
-              }}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-      </div>
-
       {/* Space for text content */}
       <div style={{
         padding: '2rem',
@@ -173,42 +131,29 @@ export default function Scene() {
             <div style={{
               marginBottom: '2rem',
               position: 'relative',
-              textAlign: 'center',
-              display: 'flex',
-              alignItems: 'baseline',
-              justifyContent: 'center',
-              gap: '1rem'
+              textAlign: 'center'
             }}>
               <h2 style={{
                 color: '#e6c88e',
                 fontSize: '2.2rem',
                 fontFamily: "'Goethe', serif",
-                margin: 0,
+                marginBottom: '0.5rem',
                 opacity: 0.9,
                 textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                fontWeight: 'normal',
-                lineHeight: 1
+                fontWeight: 'normal'
               }}>
-                Introduction
+                Introduc
               </h2>
-              <span style={{
+              <h3 style={{
                 color: '#e6c88e',
-                opacity: 0.7,
-                fontSize: '2rem',
-                lineHeight: 1
-              }}>|</span>
-              <h2 style={{
-                color: '#e6c88e',
-                fontSize: '1.8rem',
+                fontSize: '1.4rem',
                 fontFamily: 'Georgia, serif',
                 fontWeight: 'normal',
-                margin: 0,
-                opacity: 0.9,
-                letterSpacing: '0.05em',
-                lineHeight: 1
+                opacity: 0.7,
+                letterSpacing: '0.05em'
               }}>
-                Introduction
-              </h2>
+                Introduc
+              </h3>
             </div>
             <p style={{
               color: '#e6c88e',
