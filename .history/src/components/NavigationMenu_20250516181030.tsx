@@ -20,7 +20,7 @@ const NavigationMenu: React.FC = () => {
             href={`#${item.toLowerCase()}`}
             style={{
               color: '#e6c88e',
-              fontSize: '1.5rem',
+              fontSize: '1.2rem',
               textDecoration: 'none',
               fontFamily: 'Georgia, serif',
               letterSpacing: '0.05em',
