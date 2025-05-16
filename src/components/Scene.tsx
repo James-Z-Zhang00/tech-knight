@@ -3,10 +3,10 @@ import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
 import { Suspense, useEffect } from 'react'
 
 // Preload the model
-useGLTF.preload('/src/assets/models/forgotten_knight.glb')
+useGLTF.preload('/models/forgotten_knight.glb')
 
 function Knight() {
-  const { scene, nodes, materials } = useGLTF('/src/assets/models/forgotten_knight.glb')
+  const { scene, nodes, materials } = useGLTF('/models/forgotten_knight.glb')
   console.log('Model loaded:', { scene, nodes, materials }) // Debug log
   
   useEffect(() => {
@@ -20,9 +20,8 @@ function Knight() {
 export default function Scene() {
   return (
     <div style={{ width: '100vw', height: '100vh', background: '#2c1810' }}>
-      <Canvas camera={{ position: [0, 4, 12], fov: 45 }}>
+      <Canvas camera={{ position: [0, 4, 10], fov: 45 }}>
         <color attach="background" args={['#2c1810']} />
-        <fog attach="fog" args={['#2c1810', 5, 20]} />
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} intensity={1.2} color="#e6c88e" />
         <pointLight position={[-5, 5, -5]} intensity={0.6} color="#8b4513" />
