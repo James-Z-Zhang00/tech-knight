@@ -1,0 +1,33 @@
+import React, { useEffect } from 'react';
+import { useGLTF } from '@react-three/drei';
+import * as THREE from 'three';
+
+// Preload the model
+useGLTF.preload('/models/baster_sword.glb');
+
+const ExperienceSword: React.FC = () => {
+  const { scene } = useGLTF('/models/baster_sword.glb', true);
+  
+  useEffect(() => {
+    scene.traverse((child: THREE.Object3D) => {
+      if (child instanceof THREE.Mesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+        if (child.geometry instanceof THREE.BufferGeometry) {
+          child.geometry.computeVertexNormals();
+        }
+      }
+    });
+  }, [scene]);
+
+  return (
+    <primitive 
+      object={scene} 
+      scale={1.5} 
+      position={[0, 0, 0]} 
+      rotation={[0, Math.PI / 4, 0]} 
+    />
+  );
+};
+
+export default ExperienceSword; 
