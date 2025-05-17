@@ -34,8 +34,8 @@ const ExperienceSword: React.FC = () => {
     if (!swordRef.current) return;
     
     // Continuous 360-degree rotation
-    const rotationSpeed = 0.15; // Rotations per second
-    swordRef.current.rotation.x = -state.clock.elapsedTime * rotationSpeed * Math.PI * 2;
+    const rotationSpeed = 0.5; // Rotations per second
+    swordRef.current.rotation.x = state.clock.elapsedTime * rotationSpeed * Math.PI * 2;
   });
 
   return (

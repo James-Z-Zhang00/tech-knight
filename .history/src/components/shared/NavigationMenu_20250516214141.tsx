@@ -16,9 +16,7 @@ const NavigationMenu: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handleNavClick = (item: string, e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    
+  const handleNavClick = (item: string) => {
     if (isMobile) {
       setIsOpen(false);
     }
@@ -28,14 +26,6 @@ const NavigationMenu: React.FC = () => {
         top: 0,
         behavior: 'smooth'
       });
-    } else {
-      const element = document.getElementById(item.toLowerCase());
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
     }
   };
 
@@ -75,7 +65,7 @@ const NavigationMenu: React.FC = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              onClick={(e) => handleNavClick(item, e)}
+              onClick={() => handleNavClick(item)}
               style={{
                 color: '#e6c88e',
                 fontSize: '1.5rem',

@@ -32,7 +32,7 @@ const Knight: React.FC = () => {
     knightRef.current.position.y = floatOffset
     
     // Subtle rotation
-    const rotationOffset = Math.sin(state.clock.elapsedTime * 0.7) * 0.3
+    const rotationOffset = Math.sin(state.clock.elapsedTime * 0.5) * 0.3
     knightRef.current.rotation.y = -(Math.PI * 35/180) + rotationOffset
   })
 

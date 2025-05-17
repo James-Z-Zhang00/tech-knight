@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
       background: '#2c1810',
       display: 'flex',
       flexDirection: 'column',
-      paddingTop: '2rem'
+      paddingTop: '100px'
     }}>
       {/* 3D Canvas Section */}
       <div style={{ 
