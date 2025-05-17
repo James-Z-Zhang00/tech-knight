@@ -57,7 +57,7 @@ const ContentSection: React.FC = () => {
           <span style={{
             color: '#e6c88e',
             opacity: 0.7,
-            fontSize: isMobile ? '1.4rem' : '1.8rem',
+            fontSize: isMobile ? '1.6rem' : '2rem',
             lineHeight: 1,
             display: isMobile ? 'none' : 'inline'
           }}>|</span>
@@ -82,7 +82,7 @@ const ContentSection: React.FC = () => {
           fontFamily: 'Georgia, serif',
           paddingLeft: isMobile ? '1rem' : '2rem',
         }}>
-          Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
+          In the depths of time, where legends whisper through ancient stones, stands a knight of extraordinary valor. This forgotten warrior, clad in armor that bears the marks of countless battles, embodies the timeless virtues of chivalry. Though his name may have faded from the scrolls of history, his spirit endures as a testament to the enduring power of honor, courage, and unwavering dedication to noble causes.
         </p>
       </article>
     </div>

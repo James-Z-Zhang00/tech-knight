@@ -57,7 +57,7 @@ const ContentSection: React.FC = () => {
           <span style={{
             color: '#e6c88e',
             opacity: 0.7,
-            fontSize: isMobile ? '1.4rem' : '1.8rem',
+            fontSize: isMobile ? '1.6rem' : '2rem',
             lineHeight: 1,
             display: isMobile ? 'none' : 'inline'
           }}>|</span>
@@ -82,7 +82,7 @@ const ContentSection: React.FC = () => {
           fontFamily: 'Georgia, serif',
           paddingLeft: isMobile ? '1rem' : '2rem',
         }}>
-          Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
+          Hi, my name is James, an enthusiast problem solver and love c
         </p>
       </article>
     </div>

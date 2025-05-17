@@ -82,7 +82,9 @@ const ContentSection: React.FC = () => {
           fontFamily: 'Georgia, serif',
           paddingLeft: isMobile ? '1rem' : '2rem',
         }}>
-          Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
+          Hi, my name is James, an enthusiast problem solver and love conquering challenges.
+          <br />
+          I'm a full stack software engineer with expertise AI. 
         </p>
       </article>
     </div>
