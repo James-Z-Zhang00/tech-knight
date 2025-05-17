@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -28,9 +28,9 @@ const ExperienceSword: React.FC = () => {
   return (
     <primitive 
       object={scene} 
-      scale={5} 
-      position={[-2, 1, 0]} 
-      rotation={[1.2, Math.PI * 1.5, 0]} 
+      scale={3} 
+      position={[0, 1, 0]} 
+      rotation={[1, Math.PI * 1.5, 1]} 
     />
   );
 };

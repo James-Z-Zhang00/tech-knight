@@ -1,6 +1,6 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { OrbitControls, SpotLight, Environment } from '@react-three/drei';
 import ExperienceSword from '../components/ui/ExperienceSword';
 
 const Experience: React.FC = () => {
@@ -33,45 +33,6 @@ const Experience: React.FC = () => {
             target={[0, 0, 0]}
           />
         </Canvas>
-      </div>
-
-      {/* Sword Note Section */}
-      <div style={{
-        padding: '1rem',
-        textAlign: 'center',
-        background: 'rgba(44, 24, 16, 0.7)',
-        borderTop: '1px solid rgba(230, 200, 142, 0.2)',
-        borderBottom: '1px solid rgba(230, 200, 142, 0.2)',
-      }}>
-        <div style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          padding: '1rem',
-          background: 'rgba(44, 24, 16, 0.5)',
-          border: '1px solid rgba(230, 200, 142, 0.3)',
-          borderRadius: '4px'
-        }}>
-          <h4 style={{
-            color: '#f0d4a0',
-            fontSize: '1.2rem',
-            fontFamily: "'Goethe', 'Times New Roman', serif",
-            marginBottom: '0.5rem',
-            letterSpacing: '0.05em'
-          }}>
-            The Bastard Sword
-          </h4>
-          <p style={{
-            color: '#e6c88e',
-            fontSize: '0.95rem',
-            lineHeight: '1.6',
-            fontFamily: 'Georgia, serif',
-            fontStyle: 'italic'
-          }}>
-            Also known as the Hand-and-a-Half Sword, this versatile weapon represents adaptability 
-            and mastery. Like a developer's diverse skill set, it bridges the gap between 
-            agile single-handed techniques and powerful two-handed approaches.
-          </p>
-        </div>
       </div>
 
       {/* Content Section */}

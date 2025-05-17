@@ -14,6 +14,7 @@ const ExperienceLayout: React.FC<ExperienceLayoutProps> = ({ children }) => {
       display: 'flex',
       flexDirection: 'column'
     }}>
+      
       <main style={{
         flex: 1,
         width: '100%',

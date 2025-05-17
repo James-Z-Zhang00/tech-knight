@@ -28,11 +28,11 @@ const Knight: React.FC = () => {
     if (!knightRef.current) return
     
     // Floating animation
-    const floatOffset = Math.sin(state.clock.elapsedTime * 1.3) * 0.15
+    const floatOffset = Math.sin(state.clock.elapsedTime * 1.0) * 0.15
     knightRef.current.position.y = floatOffset
     
     // Subtle rotation
-    const rotationOffset = Math.sin(state.clock.elapsedTime * 0.5) * 0.3
+    const rotationOffset = Math.sin(state.clock.elapsedTime * 0.3) * 0.5
     knightRef.current.rotation.y = -(Math.PI * 35/180) + rotationOffset
   })
 

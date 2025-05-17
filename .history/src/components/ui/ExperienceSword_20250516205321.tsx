@@ -28,8 +28,8 @@ const ExperienceSword: React.FC = () => {
   return (
     <primitive 
       object={scene} 
-      scale={5} 
-      position={[-2, 1, 0]} 
+      scale={3} 
+      position={[-1, 1, 0]} 
       rotation={[1.2, Math.PI * 1.5, 0]} 
     />
   );
