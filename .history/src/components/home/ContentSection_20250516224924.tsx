@@ -42,7 +42,6 @@ const ContentSection: React.FC = () => {
         }}>
           Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
         </p>
-        <br />
         <p style={{
           color: '#e6c88e',
           fontSize: isMobile ? '1rem' : '1.4rem',

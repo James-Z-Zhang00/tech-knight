@@ -34,7 +34,7 @@ const ContentSection: React.FC = () => {
       }}>
         <p style={{
           color: '#e6c88e',
-          fontSize: isMobile ? '1rem' : '1.4rem',
+          fontSize: isMobile ? '1rem' : '1.1rem',
           lineHeight: '1.8',
           textAlign: 'justify',
           fontFamily: "'Goethe', 'Times New Roman', serif",
@@ -42,10 +42,9 @@ const ContentSection: React.FC = () => {
         }}>
           Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
         </p>
-        <br />
         <p style={{
           color: '#e6c88e',
-          fontSize: isMobile ? '1rem' : '1.4rem',
+          fontSize: isMobile ? '1rem' : '1.1rem',
           lineHeight: '1.8',
           textAlign: 'justify',
           fontFamily: 'Georgia, serif',

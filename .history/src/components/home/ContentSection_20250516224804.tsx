@@ -32,20 +32,61 @@ const ContentSection: React.FC = () => {
         borderRadius: '8px',
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
       }}>
+        <div style={{
+          marginBottom: isMobile ? '1.5rem' : '2rem',
+          position: 'relative',
+          textAlign: 'center',
+          display: 'flex',
+          alignItems: 'baseline',
+          justifyContent: 'center',
+          gap: '1rem',
+          flexWrap: isMobile ? 'wrap' : 'nowrap'
+        }}>
+          <h2 style={{
+            color: '#e6c88e',
+            fontSize: isMobile ? '1.8rem' : '2.2rem',
+            fontFamily: "'Goethe', 'Times New Roman', serif",
+            margin: 0,
+            opacity: 0.9,
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            fontWeight: 'normal',
+            lineHeight: 1
+          }}>
+            Introduction
+          </h2>
+          <span style={{
+            color: '#e6c88e',
+            opacity: 0.7,
+            fontSize: isMobile ? '1.4rem' : '1.8rem',
+            lineHeight: 1,
+            display: isMobile ? 'none' : 'inline'
+          }}>|</span>
+          <h2 style={{
+            color: '#e6c88e',
+            fontSize: isMobile ? '1.4rem' : '1.8rem',
+            fontFamily: 'Georgia, serif',
+            fontWeight: 'normal',
+            margin: 0,
+            opacity: 0.9,
+            letterSpacing: '0.05em',
+            lineHeight: 1
+          }}>
+            Introduction
+          </h2>
+        </div>
         <p style={{
           color: '#e6c88e',
-          fontSize: isMobile ? '1rem' : '1.4rem',
+          fontSize: isMobile ? '1rem' : '1.1rem',
           lineHeight: '1.8',
           textAlign: 'justify',
-          fontFamily: "'Goethe', 'Times New Roman', serif",
+          fontFamily: 'Goethe', 'Times New Roman', serif,
           paddingLeft: isMobile ? '1rem' : '2rem',
         }}>
           Hi, my name is James, an enthusiast problem solver and love conquering challenges. I have full stack software engineer and AI background.
         </p>
-        <br />
         <p style={{
           color: '#e6c88e',
-          fontSize: isMobile ? '1rem' : '1.4rem',
+          fontSize: isMobile ? '1rem' : '1.1rem',
           lineHeight: '1.8',
           textAlign: 'justify',
           fontFamily: 'Georgia, serif',
