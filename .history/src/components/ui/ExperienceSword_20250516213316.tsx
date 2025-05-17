@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 // Preload the model
@@ -11,8 +10,6 @@ const ExperienceSword: React.FC = () => {
     console.error('Error loading sword model:', error);
   });
   
-  const swordRef = useRef<THREE.Group>(null);
-
   useEffect(() => {
     scene.traverse((child: THREE.Object3D) => {
       if (child instanceof THREE.Mesh) {
@@ -30,21 +27,8 @@ const ExperienceSword: React.FC = () => {
     });
   }, [scene]);
 
-  useFrame((state) => {
-    if (!swordRef.current) return;
-    
-    // Vertical rotation animation
-    const rotationSpeed = 1.0;
-    const rotationAmplitude = 2.0;
-    const verticalRotation = Math.sin(state.clock.elapsedTime * rotationSpeed) * rotationAmplitude;
-    
-    // Apply the rotation while maintaining the base rotation
-    swordRef.current.rotation.x = verticalRotation;
-  });
-
   return (
     <primitive 
-      ref={swordRef}
       object={scene} 
       scale={5} 
       position={[-2, 1, 0]} 

@@ -34,12 +34,12 @@ const ExperienceSword: React.FC = () => {
     if (!swordRef.current) return;
     
     // Vertical rotation animation
-    const rotationSpeed = 1.0;
-    const rotationAmplitude = 2.0;
+    const rotationSpeed = 2;
+    const rotationAmplitude = 1.0;
     const verticalRotation = Math.sin(state.clock.elapsedTime * rotationSpeed) * rotationAmplitude;
     
     // Apply the rotation while maintaining the base rotation
-    swordRef.current.rotation.x = verticalRotation;
+    swordRef.current.rotation.x = 1.2 + verticalRotation;
   });
 
   return (
